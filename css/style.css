@@ -10,6 +10,10 @@
     display: flex;
 }
 
+small {
+    opacity:50%;
+}
+
 /*Header*/
 
 .container-header {
@@ -57,4 +61,34 @@ main {
 .container-header-chat{
     align-items: center;
     justify-content: space-between;
+}
+
+/*aside*/
+
+aside{
+    flex-direction: column;
+    width: 30%;
+}
+
+.info {
+    background-color: aqua;
+}
+
+nav{
+    background-color: white;
+}
+
+.container-contatti{
+    overflow-y: auto;
+    max-height: 700px;
+    background-color: white;
+}
+
+.contatto{
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.contatto:hover{
+    background-color: #555555;
 }
