@@ -72,10 +72,12 @@ aside{
 
 .info {
     background-color: aqua;
+    min-height: 70px;
 }
 
 nav{
     background-color: white;
+    min-height: 30px;
 }
 
 .container-contatti{
@@ -91,4 +93,30 @@ nav{
 
 .contatto:hover{
     background-color: #555555;
+}
+
+/* Body Message*/
+
+.body-message{
+    background-color: yellow;
+    overflow-y: auto;
+    height: 800px;
+    
+}
+
+.container-footer-body-message{
+    flex-direction: column;
+    width: 70%;
+}
+
+/*footer*/
+
+.container-footer{
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.text{
+    
 }
