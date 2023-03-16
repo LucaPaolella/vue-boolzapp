@@ -1,5 +1,60 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/*Common*/
+
+.flex {
+    display: flex;
+}
+
+/*Header*/
+
+.container-header {
+    height: 100px;
+    background-color: aquamarine;
+}
+
+/*Main*/
+
+main {
+    background-color: gainsboro;
+    height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: center;
+}
+
+.container-main {
+    border: 1px solid black;
+    width: 900px;
+    position: absolute;
+    top: 30px;
+}
+
+/*header main*/
+
+.header-main {
+    background-color: #999999;
+}
+
+.container-user{
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    border-right: 1px solid #777777;
+}
+
+.container-header-chat{
+    width: 70%;
+}
+
+.container-tools> i {
+    padding: 5px;
+}
+
+.container-header-chat{
+    align-items: center;
+    justify-content: space-between;
 }
