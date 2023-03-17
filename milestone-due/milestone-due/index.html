@@ -32,11 +32,12 @@
                 </div>
 
                 <div class="container-header-chat flex">
+
                     <div class="user flex">
                         <img src="img/avatar_2.jpg" alt="">
                         <div>
-                            <h5>Michele</h5>
-                            <small>Ultimo accesso 6.66</small>
+                            <h5>{{ activeContact.name }}</h5>
+                            <small>Ultimo accesso {{ activeContact.lastAccess }}</small>
                         </div>
                     </div>
 
@@ -64,188 +65,36 @@
                         <input type="text" placeholder="scrivi il nome del contatto">
                     </nav>
 
-                    <!--
                     <div class="container-contatti">
-                        <div class="contatto flex">
+                        <div class="contatto flex" v-for="(contact, index) in contacts" :key="index" @click="setActiveContact(contact)">
                             <div class="user-info flex">
-                                <img src="img/avatar_3.jpg" alt="">
+                                <img :src="contact.avatar" alt="">
                                 <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
+                                    <h5>{{ contact.name }}</h5>
+                                    <small>Ultimo accesso {{ contact.lastAccess }}</small>
                                 </div>
                             </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_4.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_5.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_6.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_7.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_8.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_io.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_1.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_2.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_5.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_7.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_1.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_io.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                        <div class="contatto flex">
-                            <div class="user-info flex">
-                                <img src="img/avatar_3.jpg" alt="">
-                                <div>
-                                    <h5>Tizio Caio</h5>
-                                    <small>Ultimo accesso 6.66</small>
-                                </div>
-                            </div>
-
-                            <small>66.6</small>
-                        </div>
-                    </div>-->
-                    <div class="container-contatti">
-                        <div class="contatto flex" v-for="contatto in contatti" :key="contatto.nome">
-                            <div class="user-info flex">
-                                <img :src="contatto.immagine" alt="">
-                                <div>
-                                    <h5>{{ contatto.nome }}</h5>
-                                    <small>Ultimo accesso {{ contatto.ultimoAccesso }}</small>
-                                </div>
-                            </div>
-                            <small>{{ contatto.ultimoAccesso }}</small>
+                            <small>{{ contact.lastMessage.date }}</small>
                         </div>
                     </div>
-
                 </aside>
 
                 <div class="container-footer-body-message flex">
                     <div class="body-message">
+
+                        <!--da sistemare il tag small che non funziona-->
                         <div class="flex end">
-                            <div class="me">Ciao</div>
+                            <div class="me">{{ activeContact.messages[0].text}}</div>
+                            <small>{{ activeContact.messages.date }}</small>
                         </div>
 
                         <div class="flex start">
-                            <div class="you">Ciao</div>
+                            <div class="you">{{ activeContact.messages[1].text}}</div>
+                            <small>{{ activeContact.messages.date }}</small> 
                         </div>
                     </div>
+
+                    
 
                     <footer>
                         <div class="container-footer flex">
