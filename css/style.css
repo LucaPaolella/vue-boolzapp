@@ -52,22 +52,23 @@ main {
 /*header main*/
 
 .header-main {
-    background-color: #999999;
+    background-color: gainsboro;
 }
 
 .container-user{
     align-items: center;
     justify-content: space-between;
-    width: 20%;
+    width: 30%;
     border-right: 1px solid #777777;
 }
 
 .container-header-chat{
-    width: 80%;
+    width: 70%;
 }
 
-.container-tools> i {
-    padding: 5px;
+.container-tools> i, button>i{
+    padding: 10px;
+    color: #999999;
 }
 
 .container-header-chat{
@@ -90,12 +91,28 @@ main {
 
 aside{
     flex-direction: column;
-    width: 20%;
+    width: 30%;
 }
 
 .info {
     background-color: aqua;
     min-height: 80px;
+    align-items: center;
+}
+
+.info>i{
+    background-color: white;
+    color: aqua;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 50px;
+    margin:10px;
+}
+
+.active{
+    text-decoration: underline;
 }
 
 nav{
@@ -124,9 +141,10 @@ nav{
 }
 
 nav>input{
-    width: 300px;
+    width: 420px;
     margin-top: 10px;
     margin-bottom: 10px;
+    height: 40px;
 }
 
 nav>button{
@@ -143,7 +161,7 @@ nav>button{
 
 .container-footer-body-message{
     flex-direction: column;
-    width: 80%;
+    width: 70%;
 }
 
 .me{
@@ -168,5 +186,12 @@ nav>button{
 }
 
 .text{
-    width: 1000px;
+    width: 800px;
+    height: 35px;
+}
+
+.fa-microphone, .fa-face-smile{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 25px;
 }
