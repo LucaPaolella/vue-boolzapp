@@ -16,18 +16,15 @@ small {
 
 .start{
     justify-content: flex-start;
-    background-color: greenyellow;
-    width: 50%;
+    width: 100%;
     padding: 20px;
 }
 
 .end{
-justify-content: flex-end;
-background-color: white;
-width: 50%;
-padding: 20px;
-}
+justify-content:flex-end;
+width: 100%;
 
+}
 
 /*Header*/
 
@@ -47,7 +44,7 @@ main {
 
 .container-main {
     border: 1px solid black;
-    width: 900px;
+    width: 1600px;
     position: absolute;
     top: 30px;
 }
@@ -61,12 +58,12 @@ main {
 .container-user{
     align-items: center;
     justify-content: space-between;
-    width: 30%;
+    width: 20%;
     border-right: 1px solid #777777;
 }
 
 .container-header-chat{
-    width: 70%;
+    width: 80%;
 }
 
 .container-tools> i {
@@ -78,16 +75,27 @@ main {
     justify-content: space-between;
 }
 
+.user>img, .user-info>img{
+    width: 40px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.user{
+    justify-content: center;
+    align-items: center;
+}
+
 /*aside*/
 
 aside{
     flex-direction: column;
-    width: 30%;
+    width: 20%;
 }
 
 .info {
     background-color: aqua;
-    min-height: 70px;
+    min-height: 80px;
 }
 
 nav{
@@ -107,21 +115,47 @@ nav{
 }
 
 .contatto:hover{
-    background-color: #555555;
+    background-color: #999999;
 }
 
+.user-info{
+    justify-content: center;
+    align-items: center;
+}
+
+nav>input{
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+nav>button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 /* Body Message*/
 
 .body-message{
     overflow-y: auto;
     height: calc(100% - 50px);
     background-image: url(../img/mine.jpg);
-    flex-direction: column;
 }
 
 .container-footer-body-message{
     flex-direction: column;
-    width: 70%;
+    width: 80%;
+}
+
+.me{
+    background-color:white ;
+    padding: 10px;
+    margin:10px;
+}
+
+.you{
+    background-color: greenyellow;
+    padding: 10px;
+    margin:10px;
 }
 
 /*footer*/
@@ -130,9 +164,9 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    background-color: white;
+    background-color: gainsboro;
 }
 
 .text{
-    width: 500px;
+    width: 1000px;
 }
