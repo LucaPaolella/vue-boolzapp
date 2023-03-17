@@ -14,7 +14,7 @@
     <header>
         <div class="container-header"></div>
     </header>
-    <main class="flex">
+    <main id="app" class="flex">
         <div class="container-main">
             <header class="header-main flex">
 
@@ -64,6 +64,7 @@
                         <input type="text" placeholder="scrivi il nome del contatto">
                     </nav>
 
+                    <!--
                     <div class="container-contatti">
                         <div class="contatto flex">
                             <div class="user-info flex">
@@ -219,7 +220,20 @@
 
                             <small>66.6</small>
                         </div>
-                    </div>
+                    </div>-->
+                    <div class="container-contatti">
+                        <div class="contatto flex" v-for="contatto in contatti" :key="contatto.nome">
+                          <div class="user-info flex">
+                            <img :src="contatto.immagine" alt="">
+                            <div>
+                              <h5>{{ contatto.nome }}</h5>
+                              <small>Ultimo accesso {{ contatto.ultimoAccesso }}</small>
+                            </div>
+                          </div>
+                          <small>{{ contatto.ultimoAccesso }}</small>
+                        </div>
+                      </div>
+                      
                 </aside>
 
                 <div class="container-footer-body-message flex">

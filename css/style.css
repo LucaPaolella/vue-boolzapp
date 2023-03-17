@@ -165,14 +165,16 @@ nav>button{
 }
 
 .me{
-    background-color:white ;
+    background-color:yellowgreen ;
     padding: 10px;
     margin:10px;
+    border-radius: 20%;
 }
 
 .you{
-    background-color: greenyellow;
+    background-color: white;
     padding: 10px;
+    border-radius: 20%;
     margin:10px;
 }
 
