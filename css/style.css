@@ -14,6 +14,21 @@ small {
     opacity:50%;
 }
 
+.start{
+    justify-content: flex-start;
+    background-color: greenyellow;
+    width: 50%;
+    padding: 20px;
+}
+
+.end{
+justify-content: flex-end;
+background-color: white;
+width: 50%;
+padding: 20px;
+}
+
+
 /*Header*/
 
 .container-header {
@@ -98,10 +113,10 @@ nav{
 /* Body Message*/
 
 .body-message{
-    background-color: yellow;
     overflow-y: auto;
-    height: 800px;
-    
+    height: calc(100% - 50px);
+    background-image: url(../img/mine.jpg);
+    flex-direction: column;
 }
 
 .container-footer-body-message{
@@ -114,9 +129,10 @@ nav{
 .container-footer{
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    height: 50px;
+    background-color: white;
 }
 
 .text{
-    
+    width: 500px;
 }
