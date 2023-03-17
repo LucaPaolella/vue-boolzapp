@@ -223,17 +223,17 @@
                     </div>-->
                     <div class="container-contatti">
                         <div class="contatto flex" v-for="contatto in contatti" :key="contatto.nome">
-                          <div class="user-info flex">
-                            <img :src="contatto.immagine" alt="">
-                            <div>
-                              <h5>{{ contatto.nome }}</h5>
-                              <small>Ultimo accesso {{ contatto.ultimoAccesso }}</small>
+                            <div class="user-info flex">
+                                <img :src="contatto.immagine" alt="">
+                                <div>
+                                    <h5>{{ contatto.nome }}</h5>
+                                    <small>Ultimo accesso {{ contatto.ultimoAccesso }}</small>
+                                </div>
                             </div>
-                          </div>
-                          <small>{{ contatto.ultimoAccesso }}</small>
+                            <small>{{ contatto.ultimoAccesso }}</small>
                         </div>
-                      </div>
-                      
+                    </div>
+
                 </aside>
 
                 <div class="container-footer-body-message flex">
@@ -241,12 +241,12 @@
                         <div class="flex end">
                             <div class="me">Ciao</div>
                         </div>
-                        
+
                         <div class="flex start">
                             <div class="you">Ciao</div>
                         </div>
                     </div>
-    
+
                     <footer>
                         <div class="container-footer flex">
                             <div>
@@ -259,7 +259,7 @@
                         </div>
                     </footer>
                 </div>
-                
+
             </div>
 
         </div>
