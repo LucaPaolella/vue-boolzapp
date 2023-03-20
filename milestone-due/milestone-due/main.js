@@ -192,3 +192,10 @@ const app = createApp({
     },
 });
 app.mount("#app");
+
+//porto cose dal dom 
+
+const messageInput = document.getElementById('message-input');
+const sendButton = document.getElementById('send-button');
+const bodyMessage = document.querySelector('.body-message');
+

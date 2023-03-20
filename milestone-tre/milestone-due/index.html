@@ -21,7 +21,7 @@
                 <div class="container-user flex">
                     <div class="user flex">
                         <img src="img/avatar_1.jpg" alt="">
-                        <h3>Sofia</h3>
+                        <h3>Luca</h3>
                     </div>
 
                     <div class="container-tools">
@@ -80,12 +80,11 @@
                 </aside>
 
                 <div class="container-footer-body-message flex">
-                    <div class="body-message">
 
-                        <!--da sistemare il tag small che non funziona-->
-                        <div class="flex end">
-                            <div class="me">{{ activeContact.messages[0].text}}</div>
-                            <small>{{ activeContact.messages.date }}</small>
+                    <div class="body-message">
+                        <div class="flex end" v-for="(message, index) in activeContact.messages" :key="index">
+                            <div :class="{ 'body-message-text': true, me: message.from === 'me' }">{{ message.text }}</div>
+                            <small>{{ message.date }}</small>
                         </div>
 
                         <div class="flex start">
@@ -101,7 +100,9 @@
                             <div>
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
-                            <div><input type="text" placeholder="Inserisci testo" class="text"></div>
+
+                            <input type="text" placeholder="Inserisci testo" class="text" @keyup.enter="sendMessage" v-model="message" ref="messageInput">
+
                             <div>
                                 <i class="fa-solid fa-microphone"></i>
                             </div>

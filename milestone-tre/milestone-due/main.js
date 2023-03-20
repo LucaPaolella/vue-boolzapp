@@ -16,10 +16,12 @@ const app = createApp({
                     messages: [
                         {
                             text: "Ciao Sofia!",
+                            from: "me",
                             date: "10/03/2023",
                         },
                         {
                             text: "Come stai?",
+                            from: "you",
                             date: "10/03/2023",
                         },
                     ],
@@ -34,10 +36,12 @@ const app = createApp({
                     messages: [
                         {
                             text: "Ciao Tizio!",
+                            from: "me",
                             date: "10/03/2023",
                         },
                         {
                             text: "Tutto bene grazie, tu?",
+                            from: "you",
                             date: "10/03/2023",
                         },
                     ],
@@ -52,10 +56,12 @@ const app = createApp({
                     messages: [
                         {
                             text: "Ciao Giggio!",
+                            from: "me",
                             date: "10/03/2023",
                         },
                         {
                             text: "Come va?",
+                            from: "you",
                             date: "10/03/2023",
                         },
                     ],
@@ -70,10 +76,12 @@ const app = createApp({
                     messages: [
                         {
                             text: "Ciao,mi aiuti co gli esercizi?",
+                            from: "me",
                             date: "10/03/2023",
                         },
                         {
                             text: "si",
+                            from: "you",
                             date: "10/03/2023",
                         },
                     ],
@@ -88,10 +96,12 @@ const app = createApp({
                     messages: [
                         {
                             text: "Sei molto buona!",
+                            from: "me",
                             date: "10/03/2023",
                         },
                         {
                             text: "Lo so",
+                            from: "you",
                             date: "10/03/2023",
                         },
                     ],
@@ -106,10 +116,12 @@ const app = createApp({
                     messages: [
                         {
                             text: "Ciao,mi aiuti co gli esercizi?",
+                            from: "me",
                             date: "10/03/2023",
                         },
                         {
                             text: "Si",
+                            from: "you",
                             date: "10/03/2023",
                         },
                     ],
@@ -124,10 +136,12 @@ const app = createApp({
                     messages: [
                         {
                             text: "Ciao, mi aiuti con gli esercizi?",
+                            from: "me",
                             date: "10/03/2023",
                         },
                         {
                             text: "Si",
+                            from: "you",
                             date: "10/03/2023",
                         },
                     ],
@@ -142,10 +156,12 @@ const app = createApp({
                     messages: [
                         {
                             text: "Ciao, mi aiuti con gli esercizi?",
+                            from: "me",
                             date: "10/03/2023",
                         },
                         {
                             text: "Si",
+                            from: "you",
                             date: "10/03/2023",
                         },
                     ],
@@ -160,10 +176,12 @@ const app = createApp({
                     messages: [
                         {
                             text: "Ciao, mi aiuti con gli esercizi?",
+                            from: "me",
                             date: "10/03/2023",
                         },
                         {
                             text: "Si",
+                            from: "you",
                             date: "10/03/2023",
                         },
                     ],
@@ -175,10 +193,12 @@ const app = createApp({
                 messages: [
                     {
                         text: "Ciao,mi aiuti con gli esercizi?",
+                        from: "me",
                         date: "10/03/2023",
                     },
                     {
                         text: "si",
+                        from: "you",
                         date: "10/03/2023",
                     },
                 ],
@@ -189,6 +209,31 @@ const app = createApp({
         setActiveContact(contact) {
             this.activeContact = contact;
         },
+
+        sendMessage() {
+            if (this.message.trim() === "") {
+                return;
+            };
+            const message = {
+                text: this.message,
+                from: "me",
+                date: new Date().toLocaleString(),
+                };
+                this.activeContact.messages.push(message);
+                this.message
+        },
+
+        AddMessage() {
+            if (this.sendMessage() === true){
+                const message = {
+                    text: "Ok",
+                    from: "you",
+                    date: new Date().toLocaleString(),
+                    };
+                    this.activeContact.messages.push(message);
+                this.message
+            }
+        }
     },
-});
-app.mount("#app");
+}); app.mount("#app");
+
