@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-header"></div>
+    </header>
+    <main id="app" class="flex">
+        <div class="container-main">
+            <header class="header-main flex">
+
+                <div class="container-user flex">
+                    <div class="user flex">
+                        <img src="img/avatar_1.jpg" alt="">
+                        <h3>Sofia</h3>
+                    </div>
+
+                    <div class="container-tools">
+                        <i class="fa-sharp fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="container-header-chat flex">
+
+                    <div class="user flex">
+                        <img src="img/avatar_2.jpg" alt="">
+                        <div>
+                            <h5>{{ activeContact.name }}</h5>
+                            <small>Ultimo accesso {{ activeContact.lastAccess }}</small>
+                        </div>
+                    </div>
+
+                    <div class="container-tools">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container-aside-body-message flex">
+
+                <aside class="flex">
+                    <div class="info flex">
+                        <i class="flex fa-solid fa-bell-slash"></i>
+                        <div>
+                            <h5>Ricevi notifiche di nuovi messaggi</h5>
+                            <small class="active">Attiva notifiche</small>
+                        </div>
+                    </div>
+
+                    <nav>
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text" placeholder="scrivi il nome del contatto">
+                    </nav>
+
+                    <div class="container-contatti">
+                        <div class="contatto flex" v-for="(contact, index) in contacts" :key="index" @click="setActiveContact(contact)">
+                            <div class="user-info flex">
+                                <img :src="contact.avatar" alt="">
+                                <div>
+                                    <h5>{{ contact.name }}</h5>
+                                    <small>Ultimo accesso {{ contact.lastAccess }}</small>
+                                </div>
+                            </div>
+                            <small>{{ contact.lastMessage.date }}</small>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="container-footer-body-message flex">
+                    <div class="body-message">
+
+                        <!--da sistemare il tag small che non funziona-->
+                        <div class="flex end">
+                            <div class="me">{{ activeContact.messages[0].text}}</div>
+                            <small>{{ activeContact.messages.date }}</small>
+                        </div>
+
+                        <div class="flex start">
+                            <div class="you">{{ activeContact.messages[1].text}}</div>
+                            <small>{{ activeContact.messages.date }}</small> 
+                        </div>
+                    </div>
+
+                    
+
+                    <footer>
+                        <div class="container-footer flex">
+                            <div>
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                            <div><input type="text" placeholder="Inserisci testo" class="text"></div>
+                            <div>
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
